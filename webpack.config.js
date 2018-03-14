@@ -1,17 +1,6 @@
-const path = require( 'path' )
-const webpack = require( 'webpack' )
-
-
-
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template: __dirname + '/app/index.html',
-    filename: 'index.html',
-    inject: 'body'
-});
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: __dirname + '/app/index.js',
     module: {
         rules: [
             {
@@ -20,15 +9,22 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 }
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: { minimize: true }
+                    }
+                ]
             }
         ]
     },
-    resolve: {
-        extensions: ['.js', '.jsx']
-    },
-    output: {
-        filename: 'transformed.js',
-        path: path.resolve( __dirname + 'build' ),
-    },
-    plugins: [HTMLWebpackPluginConfig]
+    plugins: [
+        new HtmlWebPackPlugin ({
+            template: "./src/index.html",
+            filename: "./index.html"
+        })
+    ]
 };

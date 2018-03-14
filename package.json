@@ -1,10 +1,10 @@
 {
   "name": "squishfruitsreact",
   "version": "1.0.0",
-  "description": "First Solo React Project",
+  "description": "",
   "main": "index.js",
   "scripts": {
-      "dev": "webpack --mode development",
+      "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,23 +12,24 @@
     "type": "git",
     "url": "git+https://github.com/marissamcdonnell/Squish-Fruits-React.git"
   },
-  "author": "Marissa McDonnell",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/marissamcdonnell/Squish-Fruits-React/issues"
   },
   "homepage": "https://github.com/marissamcdonnell/Squish-Fruits-React#readme",
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
   }
 }
