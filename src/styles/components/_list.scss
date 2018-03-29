@@ -1,0 +1,45 @@
+.side {
+    margin: 0 0 0 550px;
+    background-color: rgba(255, 248, 191, 0.92);
+    position: fixed;
+    top: 152px;
+    width: 350px;
+    bottom: 46px;
+    box-shadow: 4px 4px 15px rgba( 0, 0, 0, 0.5);
+    font-family: $main-font;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.side ul {
+    list-style: none;
+    padding: 0 37px;
+}
+
+.side li {
+    font-size: 24px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 25px;
+}
+
+.side img {
+    height: 113px;
+    padding-right: 26px;
+    vertical-align: middle;
+}
+
+.side::-webkit-scrollbar {
+    width: 1em;
+}
+
+.side::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.side::-webkit-scrollbar-thumb {
+    background-color: orange;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+}

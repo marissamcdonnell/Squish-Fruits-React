@@ -1,0 +1,21 @@
+.yellowbox {
+    background-color: $trans-yellow;
+    font-family: $main-font;
+    padding: 10px 20px 0 20px;
+    width: 462px;
+    position: fixed;
+    bottom: 10px;
+    top: 112px;
+}
+
+.yellowbox--list {
+    background-color: transparent;
+}
+
+.front-page-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 64px 0 64px;
+    align-items: center;
+}
