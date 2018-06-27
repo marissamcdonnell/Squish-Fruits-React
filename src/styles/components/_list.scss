@@ -1,0 +1,101 @@
+.side {
+    margin: 0 0 0 550px;
+    background-color: rgba(255, 248, 191, 0.92);
+    position: fixed;
+    top: 152px;
+    width: 350px;
+    bottom: 46px;
+    box-shadow: 4px 4px 15px rgba( 0, 0, 0, 0.5);
+    font-family: $main-font;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.side ul {
+    list-style: none;
+    padding: 0 37px;
+}
+
+.side li {
+    font-size: 24px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 25px;
+}
+
+.side img {
+    height: 113px;
+    padding-right: 26px;
+    vertical-align: middle;
+}
+
+.side::-webkit-scrollbar {
+    width: 1em;
+}
+
+.side::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.side::-webkit-scrollbar-thumb {
+    background-color: orange;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+}
+
+.fruitL2 {
+    background-color: rgba(255, 248, 191, 0.92);
+    position: fixed;
+    display: inline-block;
+    width: 490px;
+    top: 312px;
+    bottom: 10px;
+    box-shadow: 4px 4px 15px rgba( 0, 0, 0, 0.5);
+    font-family: 'Actor', 'sans-serif';
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.fruitL2::-webkit-scrollbar {
+    width: 1em;
+}
+
+.fruitL2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.fruitL2::-webkit-scrollbar-thumb {
+    background-color: orange;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+}
+
+#fruitsLB ul{
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.fruitL2 ul{
+    display: inline-block;
+    padding-right: 10px;
+    text-align: center;
+    width: 400px;
+    line-height: 2em;
+}
+
+.fruitL2 li{
+    padding-bottom: 30px;
+    padding-right: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+.fruitL2 img {
+    display: block;
+    padding-left: 22px;
+    cursor: pointer;
+}
