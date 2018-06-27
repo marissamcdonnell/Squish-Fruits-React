@@ -1,7 +1,8 @@
 import React from 'react';
 import List from './List';
+import { Link } from 'react-router-dom';
 
-export default class Home extends React.Component {
+export default class HomePage extends React.Component {
     state = {
         showList: false
     }
@@ -19,22 +20,17 @@ handleList = () => {
                             <h1>Welcome to Squish Fruit</h1>
                             <h3>Squishing fruit is our thing!</h3>
                             <p>Click below to see a list of all of the available fruit to squish!</p>
-                        <button
+                        <Link to="/list"><button
                             // className="home"
                             onClick={this.handleList}
                             id = "sideFruits"
                         >
                             Fruits!
-                        </button>
+                        </button></Link>
                     </div>
-                        : null
+                        : <List />
                     }
                 </div>
-
-                {
-                    this.state.showList ?
-                    <List /> : null
-                }
             </div>
         )
     }

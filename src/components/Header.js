@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
     <div className = "header">
@@ -8,9 +9,9 @@ const Header = () => (
             </div>
             <div className = "nav">
                 <ul>
-                  <li className = "home"><a className = "active" href = "index.html">Home</a></li>
-                  <li className = "fruits"><a href = "fruits.html">Fruits</a></li>
-                  <li className = "about"><a href = "about.html">About</a></li>
+                  <li className = "home"><NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink></li>
+                  <li className = "fruits"><NavLink to="/fruits" activeClassName="is-active">Fruits</NavLink></li>
+                  <li className = "about"><NavLink to="/about" activeClassName="is-active">About</NavLink></li>
                 </ul>
              </div>
         </div>

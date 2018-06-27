@@ -1,0 +1,17 @@
+.about-page {
+    background-color: $trans-yellow;
+    position: absolute;
+    top: 112px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.about-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    max-width: 610px;
+    margin: auto;
+}

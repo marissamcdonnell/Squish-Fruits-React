@@ -56,14 +56,14 @@ $(document).ready(function() {
                         var x = document.getElementById([i]).getAttribute("src");
                         var y = document.getElementById([i]).getAttribute("id");
                         if (clicks === 1) {
-                            document.getElementsByClassName("fruit-boxes-1")[0].setAttribute("src", x);
-                            document.getElementsByClassName("fruit-boxes-1")[0].setAttribute("id", y);
+                            document.getElementsByclass("fruit-boxes-1")[0].setAttribute("src", x);
+                            document.getElementsByclass("fruit-boxes-1")[0].setAttribute("id", y);
                         } else if (clicks === 2) {
-                            document.getElementsByClassName("fruit-boxes-2")[0].setAttribute("src", x);
-                            document.getElementsByClassName("fruit-boxes-2")[0].setAttribute("id", y);
+                            document.getElementsByclass("fruit-boxes-2")[0].setAttribute("src", x);
+                            document.getElementsByclass("fruit-boxes-2")[0].setAttribute("id", y);
                         } else {
-                            document.getElementsByClassName("fruit-boxes-3")[0].setAttribute("src", x);
-                            document.getElementsByClassName("fruit-boxes-3")[0].setAttribute("id", y);
+                            document.getElementsByclass("fruit-boxes-3")[0].setAttribute("src", x);
+                            document.getElementsByclass("fruit-boxes-3")[0].setAttribute("id", y);
                             clicks = 0;
                             var but = $("#add-button");
                             but.show();
@@ -127,9 +127,9 @@ $(document).ready(function() {
                 $(".alert").show();
                 $fruitFlav = $.getJSON('package.json', function (data) {
 
-                    var fruitA = document.getElementsByClassName("fruit-boxes-1")[0].getAttribute("id");
-                    var fruitB = document.getElementsByClassName("fruit-boxes-2")[0].getAttribute("id");
-                    var fruitC = document.getElementsByClassName("fruit-boxes-1")[0].getAttribute("id");
+                    var fruitA = document.getElementsByclass("fruit-boxes-1")[0].getAttribute("id");
+                    var fruitB = document.getElementsByclass("fruit-boxes-2")[0].getAttribute("id");
+                    var fruitC = document.getElementsByclass("fruit-boxes-1")[0].getAttribute("id");
 
                     var fruitChoice = [fruitA, fruitB, fruitC];
                     var numA = Math.floor(Math.random() * 3);

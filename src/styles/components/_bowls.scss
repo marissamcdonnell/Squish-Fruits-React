@@ -1,0 +1,46 @@
+.mix-right-bowl img{
+    position: fixed;
+    height: 300px;
+    left: 610px;
+    top: 400px;
+}
+
+.fruit-boxes-1 {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: 261px;
+    transform: rotate(65deg);
+    left: 600px;
+}
+
+.fruit-boxes-2 {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: 217px;
+    left: 777px;
+}
+
+.fruit-boxes-3 {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: 261px;
+    transform: rotate(-65deg);
+    left: 950px;
+}
+
+#add-button {
+    margin-top: 11px;
+}
+
+#getStarted {
+    left:22%;
+    text-decoration: none;
+}
+
+#aboutbowl {
+    height: 100px;
+    margin: 80px 0 40px 0px;
+}
