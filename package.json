@@ -2,6 +2,10 @@
   "name": "squishfruitsreact",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+      "node": "9.10.0",
+      "npm": "5.8.0"
+  },
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
