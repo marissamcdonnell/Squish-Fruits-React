@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-      "node": "9.10.0",
-      "npm": "5.8.0"
+    "node": "9.10.0",
+    "npm": "5.8.0"
   },
   "scripts": {
     "serve": "live-server public/",
@@ -25,8 +25,8 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "1.5.2",
-    "babel-preset-react": "6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -39,6 +39,7 @@
     "node-sass": "^4.9.0",
     "normalize.css": "^7.0.0",
     "npm": "^6.1.0",
+    "prop-types": "^15.6.2",
     "raf": "^3.4.0",
     "react": "^16.4.1",
     "react-addons-shallow-compare": "^15.6.2",
