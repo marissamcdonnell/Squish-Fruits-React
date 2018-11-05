@@ -13,10 +13,7 @@ export class AppContextProvider extends React.Component {
       click: 0,
       fruits: [],
       url: "",
-      fruitA: "",
-      fruitB: "",
-      fruitC: "",
-      update: false
+      clickedFruits: [],
     };
     this.getContext = this.getContext.bind(this);
     this.chooseFruit = this.chooseFruit.bind(this);
@@ -36,37 +33,42 @@ export class AppContextProvider extends React.Component {
     };
   }
 
-  chooseFruit(e) {
-    const { click, fruits } = this.state;
-    const chosenFruitId = e;
-    const fruitAUrl = fruits.find(fruit => fruit.id === chosenFruitId);
+  chooseFruit(id) {
+    const { fruits } = this.state;
+    const chosenFruitId = id;
+    const { url } = fruits.find(fruit => fruit.id === chosenFruitId);
 
-    if (click === 0) {
-      this.setState(prevState => {
-        return {
-          click: prevState.click + 1,
-          fruitA: fruitAUrl.url,
-          update: true
-        };
-      });
-    }
+    this.setState( ({ clickedFruits }) => ({
+      clickedFruits: clickedFruits.length > 2 ? [] : [...clickedFruits, url]
+      }))
 
-    if (click === 1) {
-      this.setState(prevState => {
-        return {
-          click: prevState.click + 1,
-          fruitB: fruitAUrl.url
-        };
-      });
-    }
-    if (click === 2) {
-      this.setState(prevState => {
-        return {
-          click: 0,
-          fruitC: fruitAUrl.url
-        };
-      });
-    }
+      //rotate array of fruits.
+
+    // if (click === 0) {
+    //   this.setState(prevState => {
+    //     return {
+    //       click: prevState.click + 1,
+    //       fruitA: fruitAUrl.url,
+    //     };
+    //   });
+    // }
+
+    // if (click === 1) {
+    //   this.setState(prevState => {
+    //     return {
+    //       click: prevState.click + 1,
+    //       fruitB: fruitAUrl.url
+    //     };
+    //   });
+    // }
+    // if (click === 2) {
+    //   this.setState(() => {
+    //     return {
+    //       click: 0,
+    //       fruitC: fruitAUrl.url
+    //     };
+    //   });
+    // }
     //
     // const urlB = url.filter(item => {
     //   if (item !== undefined) {

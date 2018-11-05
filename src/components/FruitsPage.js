@@ -33,8 +33,7 @@ const FruitsPage = ({ appContext }) => (
             <img
               id="a"
               className="fruit-boxes-1"
-              src={
-                appContext.update
+              src={appContext.fruitA.length > 0
                   ? appContext.fruitA
                   : "https://marissamcdonnellportfolio.files.wordpress.com/2018/04/greenbowl.png"
               }
