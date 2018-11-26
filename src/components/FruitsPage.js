@@ -9,7 +9,6 @@ const FruitsPage = ({ appContext }) => (
         <h3>Now the real fun begins!</h3>
         <p id="clickhide"> Pick three of the fruits from the list below.</p>
         <button id="add-button">Add to Bowl</button>
-        <p>state: {appContext.click}</p>
         <div className="fruitL2">
           <div id="fruitsLB">
             <ul>
@@ -33,8 +32,8 @@ const FruitsPage = ({ appContext }) => (
             <img
               id="a"
               className="fruit-boxes-1"
-              src={appContext.fruitA.length > 0
-                  ? appContext.fruitA
+              src={appContext.clickedFruits.length > 0
+                  ? appContext.clickedFruits[0]
                   : "https://marissamcdonnellportfolio.files.wordpress.com/2018/04/greenbowl.png"
               }
             />
@@ -44,8 +43,8 @@ const FruitsPage = ({ appContext }) => (
               id="b"
               className="fruit-boxes-2"
               src={
-                appContext.fruitB.length > 0
-                  ? appContext.fruitB
+                appContext.clickedFruits.length > 1
+                  ? appContext.clickedFruits[1]
                   : "https://marissamcdonnellportfolio.files.wordpress.com/2018/04/greenbowl.png"
               }
             />
@@ -55,8 +54,8 @@ const FruitsPage = ({ appContext }) => (
               id="c"
               className="fruit-boxes-3"
               src={
-                appContext.fruitC.length > 0
-                  ? appContext.fruitC
+                appContext.clickedFruits.length > 2
+                  ? appContext.clickedFruits[2]
                   : "https://marissamcdonnellportfolio.files.wordpress.com/2018/04/greenbowl.png"
               }
             />
