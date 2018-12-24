@@ -1,34 +1,52 @@
 /*animation images for squishing fruit*/
 
 .squish {
-    left: 29%;
+  left: 29%;
 }
 
 .pestle {
-    top: 30px;
-    left: 602px;
-    position: relative;
-    height: 300px;
-    transform: rotate(16deg);
+  position: relative;
+  height: 300px;
+  transform: rotate(16deg);
 }
 
 .squishFruit {
-    position: fixed;
-    width: 437px;
-    top: 454px;
-    left: 626px;
+  position: fixed;
+  width: 437px;
+  top: 454px;
+  left: 626px;
 }
 
 .squishFruit2 {
-    position: fixed;
-    width: 437px;
-    top: 409px;
-    left: 626px;
+  position: fixed;
+  width: 437px;
+  top: 409px;
+  left: 626px;
+  z-index: 10;
 }
 
 .squishFruit3 {
-    position: fixed;
-    width: 437px;
-    top: 399px;
-    left: 626px;
+  position: fixed;
+  width: 437px;
+  top: 399px;
+  left: 626px;
+  z-index: 2;
+}
+
+.fruit-1-in-bowl {
+  width: 100px;
+  margin: 280px auto auto 87px;
+  transition: 700ms;
+}
+
+.fruit-2-in-bowl {
+  width: 100px;
+  margin: 280px auto auto -38px;
+  transition: 700ms;
+}
+
+.fruit-3-in-bowl {
+  width: 100px;
+  margin: 280px auto auto -43px;
+  transition: 700ms;
 }

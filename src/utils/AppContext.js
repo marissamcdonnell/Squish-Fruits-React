@@ -14,9 +14,12 @@ export class AppContextProvider extends React.Component {
       fruits: [],
       url: "",
       clickedFruits: [],
+      addFruit: false
     };
     this.getContext = this.getContext.bind(this);
     this.chooseFruit = this.chooseFruit.bind(this);
+    this.addFruitToBowl = this.addFruitToBowl.bind(this);
+    this.resetFruits = this.resetFruits.bind(this);
   }
 
   componentDidMount() {
@@ -29,7 +32,9 @@ export class AppContextProvider extends React.Component {
   getContext() {
     return {
       ...this.state,
-      chooseFruit: this.chooseFruit
+      chooseFruit: this.chooseFruit,
+      addFruitToBowl: this.addFruitToBowl,
+      resetFruits: this.resetFruits
     };
   }
 
@@ -38,14 +43,31 @@ export class AppContextProvider extends React.Component {
     const chosenFruitId = id;
     const { url } = fruits.find(fruit => fruit.id === chosenFruitId);
 
-    this.setState( ({ click, clickedFruits }) => ({
-        click: click + 1,
-        clickedFruits: click < 3 ? [...clickedFruits, url] : [...clickedFruits.slice(1), url]
-      }))
-    
-          //first solution to rotate through adding fruits then clearing fruits on fourth click
-      // clickedFruits: clickedFruits.length > 2 ? [] : [...clickedFruits, url]
+    this.setState(({ click, clickedFruits }) => ({
+      click: click + 1,
+      clickedFruits:
+        click < 3 ? [...clickedFruits, url] : [...clickedFruits.slice(1), url]
+    }));
+
+    //first solution to rotate through adding fruits then clearing fruits on fourth click
+    // clickedFruits: clickedFruits.length > 2 ? [] : [...clickedFruits, url]
   }
+
+  addFruitToBowl() {
+    this.setState({
+      addFruit: true
+    });
+  }
+
+  resetFruits() {
+    this.setState({
+      addFruit: false,
+      click: 0,
+      clickedFruits: []
+    });
+  }
+
+  squishing() {}
 
   render() {
     const { render } = this.props;

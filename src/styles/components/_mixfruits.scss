@@ -1,60 +1,71 @@
 .mix {
-    background-color: rgba(255, 248, 191, 0.8);
-    position: absolute;
-    top: 112px;
-    right: 0;
-    left: 0;
-    bottom: 0;
+  background-color: rgba(255, 248, 191, 0.8);
+  position: absolute;
+  top: 112px;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .mix-container {
-    max-width: 1000px;
-    display: flex;
-    margin: auto;
+  max-width: 1000px;
+  display: flex;
+  margin: auto;
 }
 
 .mixLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 490px;
+
+  .mix-squish-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 490px;
+    width: 100%;
+    justify-content: space-around;
+
+    button {
+      margin-top: 20px;
+    }
+  }
 }
 
 .mixLeft h3 {
-    margin: 1.5rem 0 .5rem 0;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 .mix-right-bowl {
-    display: flex;
-    width: -webkit-fill-available;
-    max-width: 430px;
-    flex-direction: column;
-    padding: 0 40px;
-    align-items: center;
+  display: flex;
+  width: -webkit-fill-available;
+  max-width: 430px;
+  flex-direction: column;
+  padding: 0 40px;
+  align-items: center;
 }
 
 .mix-right-bowl img {
-    left: unset;
+  left: unset;
 }
 
 .basket {
-    top: 217px;
-    display: flex;
-    width: 450px;
-    position: fixed;
+  top: 217px;
+  display: flex;
+  width: 450px;
+  position: fixed;
+  z-index: 5;
 }
 
 .basket img {
-    height: 100px;
-    top: unset;
+  height: 100px;
+  top: unset;
 }
 
 .fruit-basket {
-    width: 100px;
-    margin: 0 auto;
+  width: 100px;
+  margin: 0 auto;
 }
 
 .fruit-basket_sides {
-    width: 100px;
-    margin: 65px auto auto auto;
+  width: 100px;
+  margin: 65px auto auto auto;
 }
