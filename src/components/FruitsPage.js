@@ -8,7 +8,7 @@ const FruitsPage = ({ appContext }) => (
       <div className="mixLeft">
         <h3>Now the real fun begins!</h3>
         <p id="clickhide"> Pick three of the fruits from the list below.</p>
-        <button id="add-button">Add to Bowl</button>
+        <button className="button" id="add-button" onClick={appContext.addToBowl}>Add to Bowl</button>
         <div className="fruitL2">
           <div id="fruitsLB">
             <ul>
@@ -61,6 +61,9 @@ const FruitsPage = ({ appContext }) => (
             />
           </div>
         </div>
+          <img src="" />
+          <img className="squishFruit2" src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/frontbowl.png" />
+          <img className="squishFruit3" src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/greenbowl.png" />
       </div>
     </div>
   </div>

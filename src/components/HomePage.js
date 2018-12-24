@@ -25,7 +25,7 @@ export default class HomePage extends React.Component {
               </p>
               <Link to="/list">
                 <button
-                  // className="home"
+                  className="button"
                   onClick={this.handleList}
                   id="sideFruits"
                 >

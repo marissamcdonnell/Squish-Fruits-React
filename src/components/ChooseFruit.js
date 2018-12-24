@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const ChooseFruit = ({ onClick, id, src }) => (
   <Fragment>
-    <button onClick={() => onClick(id)} type="button" >
+    <button className="fruit-button" onClick={() => onClick(id)} type="button" >
       <img id={id} src={src} />
     </button>
   </Fragment>

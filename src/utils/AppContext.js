@@ -38,13 +38,10 @@ export class AppContextProvider extends React.Component {
     const chosenFruitId = id;
     const { url } = fruits.find(fruit => fruit.id === chosenFruitId);
 
-    this.setState( ({ click }) => {
-      const newClickedFruits = [...this.state.clickedFruits];
-      return ({
+    this.setState( ({ click, clickedFruits }) => ({
         click: click + 1,
-        clickedFruits: click < 3 ? [...newClickedFruits, url] : [...newClickedFruits.slice(1), url]
-      }
-      )})
+        clickedFruits: click < 3 ? [...clickedFruits, url] : [...clickedFruits.slice(1), url]
+      }))
     
           //first solution to rotate through adding fruits then clearing fruits on fourth click
       // clickedFruits: clickedFruits.length > 2 ? [] : [...clickedFruits, url]

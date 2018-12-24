@@ -23,7 +23,7 @@ const List = ({ appContext }) => (
         </h3>
         <p>Please click the button below to begin.</p>
         <Link to="/fruits">
-          <button>Squishables</button>
+          <button className="button">Squishables</button>
         </Link>
       </div>
     </div>
