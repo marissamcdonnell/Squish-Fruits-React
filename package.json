@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "ajv": "^6.5.1",
+    "animejs": "^2.2.0",
     "axios": "^0.18.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.26.3",
