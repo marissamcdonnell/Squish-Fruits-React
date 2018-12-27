@@ -13,8 +13,9 @@ const FruitsPage = ({ appContext }) => (
           <Fragment>
             <p> Pick three of the fruits from the list below.</p>
             <button
+              id="add-to-bowl"
               className="button"
-              onClick={appContext.click >= 3 ? appContext.addFruitToBowl : ""}
+              onClick={appContext.addFruitToBowl}
             >
               Add to Bowl
             </button>
@@ -39,11 +40,7 @@ const FruitsPage = ({ appContext }) => (
                 appContext.fruits.map(fruit => (
                   <li key={fruit.id}>
                     <ChooseFruit
-                      onClick={
-                        appContext.addFruit == false
-                          ? appContext.chooseFruit
-                          : ""
-                      }
+                      onClick={appContext.chooseFruit}
                       id={fruit.id}
                       src={fruit.url}
                     />
