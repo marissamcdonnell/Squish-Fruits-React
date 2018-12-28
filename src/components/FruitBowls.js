@@ -51,13 +51,16 @@ const FruitBowls = ({ appContext }) => (
       </div>
     </div>
     <img
-      className="squishFruit2"
+      className="bowlFront"
       src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/frontbowl.png"
     />
     <img
-      className="squishFruit3"
+      className="bowlBack"
       src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/greenbowl.png"
     />
+    <img className="squishFruit" src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/squish1.png" /> 
+    <img className="squishFruit2" src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/squish2.png" /> 
+    <img className="squishFruit3" src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/squish3.png" /> 
   </div>
 );
 

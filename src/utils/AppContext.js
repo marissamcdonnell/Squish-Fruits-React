@@ -15,7 +15,8 @@ export class AppContextProvider extends React.Component {
       fruits: [],
       url: "",
       clickedFruits: [],
-      addFruit: false
+      addFruit: false,
+      squishClick: 0
     };
     this.getContext = this.getContext.bind(this);
     this.chooseFruit = this.chooseFruit.bind(this);
@@ -81,39 +82,92 @@ export class AppContextProvider extends React.Component {
     anime({
       targets: ".pestle",
       translateY: [
-        { value: 200, duration: 500 },
-        { value: 0, duration: 500 },
+        { value: 200, duration: 400},
+        { value: 0, duration: 500, easing: "easeOutExpo" },
 
-        { value: 200, duration: 500 },
-        { value: 0, duration: 600 }
+        { value: 200, duration: 400 },
+        { value: 0, duration: 600, easing: "easeOutExpo" },
+
+        { value: 200, duration: 400 },
+        { value: 0, duration: 600, easing: "easeOutExpo" }
       ],
       translateX: [
-        { value: 60, delay: 600 },
-        { value: -100, delay: 500 },
-        { value: 0, delay: 300 }
+        { value: -20, duration: 400},
+        { value: 60, duration: 500, easing: "easeOutExpo" },
+
+        { value: 0, duration: 400 },
+        { value: -60, duration: 600, easing: "easeOutExpo" },
+
+        { value: 20, duration: 400 },
+        { value: 0, duration: 600, easing: "easeOutExpo" }
       ],
       rotate: [
-        {
-          value: 25,
-          duration: 200,
-          easing: "easeOutSine"
-        },
-        {
-          delay: 1400,
-          value: -10,
-          duration: 200,
-          easing: "easeOutSine"
-        },
-        {
-          delay: 1450,
-          value: 16,
-          duration: 200,
-          easing: "easeOutQuad"
-        }
+        { value: 25, duration: 400, delay: 400, easing: "easeOutSine" },
+
+        { value: -10, duration: 400, delay: 400, easing: "easeOutSine" },
+
+        { value: 16, duration: 400, delay: 400, easing: "easeOutSine" }
       ]
-      // duration: 2000
-      // loop: true
     });
+    switch (this.state.squishClick) {
+      case 0:
+        anime({
+          delay: 300,
+          targets: ".squishFruit",
+          opacity: 1,
+          easing: "easeInOutQuad",
+          translateY: {value: -18, easing: "linear"},
+          duration: 1000
+        })
+        break
+      case 1:
+        let case1 = anime.timeline()
+        case1
+          .add({
+            targets: ".squishFruit",
+            opacity: 0,
+            easing: "easeInOutQuad",
+            translateY: {value: 15, easing: "linear"},
+            duration: 1000
+          })
+          .add({
+            offset: 0,
+            targets: ".squishFruit2",
+            opacity: 1,
+            easing: "easeInOutQuad",
+            translateY: {value: -18, easing: "linear"},
+            duration: 1000
+          })
+          break
+        case 2:
+          let case2 = anime.timeline()
+          case2
+            .add({
+              targets: ".squishFruit2",
+              opacity: 0,
+              easing: "easeInOutQuad",
+              translateY: {value: 15, easing: "linear"},
+              duration: 1000
+            })
+            .add({
+              offset: 0,
+              targets: ".squishFruit3",
+              opacity: 1,
+              easing: "easeInOutQuad",
+              translateY: {value: -18, easing: "linear"},
+              duration: 1000
+            })
+            break
+      default:
+      console.log('default')
+        
+        break
+  }
+  
+
+
+    this.setState({squishClick: this.state.squishClick + 1})
+    console.log("squish click", this.state.squishClick)
   }
 
   render() {
