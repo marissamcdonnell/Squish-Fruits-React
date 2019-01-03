@@ -10,13 +10,15 @@ const SquishPage = ({ appContext }) => (
         Squish!!!
       </button>
     </div>
-    <div>
-      <img
-        className="pestle"
-        src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/pestle.png"
-      />
-      <FruitBowls />
-    </div>
+    {appContext.squishClick == 4 ? '' : 
+      <div>
+        <img
+          className="pestle"
+          src="https://marissamcdonnellportfolio.files.wordpress.com/2018/04/pestle.png"
+        />
+        <FruitBowls />
+      </div>
+      }
   </div>
 );
 

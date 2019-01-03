@@ -3,26 +3,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 import anime from "animejs";
+import Modal from 'react-modal';
 
 const AppContext = React.createContext();
 
 export class AppContextProvider extends React.Component {
   constructor(props) {
     super(props);
-    // fruitA is a value for default bowl image. These images aren't in the api
     this.state = {
       click: 0,
       fruits: [],
       url: "",
       clickedFruits: [],
       addFruit: false,
-      squishClick: 0
+      squishClick: 0,
+      showModal: false,
+      redirect: false,
+      taste: ''
     };
     this.getContext = this.getContext.bind(this);
     this.chooseFruit = this.chooseFruit.bind(this);
     this.addFruitToBowl = this.addFruitToBowl.bind(this);
     this.resetFruits = this.resetFruits.bind(this);
     this.squishing = this.squishing.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.fruitTaste = this.fruitTaste.bind(this);
   }
 
   componentDidMount() {
@@ -32,13 +37,18 @@ export class AppContextProvider extends React.Component {
     });
   }
 
+  componentWillMount() {
+    Modal.setAppElement('body');
+  }
+
   getContext() {
     return {
       ...this.state,
       chooseFruit: this.chooseFruit,
       addFruitToBowl: this.addFruitToBowl,
       resetFruits: this.resetFruits,
-      squishing: this.squishing
+      squishing: this.squishing,
+      closeModal: this.closeModal
     };
   }
 
@@ -63,8 +73,10 @@ export class AppContextProvider extends React.Component {
   addFruitToBowl() {
     if (this.state.click >= 3) {
       this.setState({
-        addFruit: true
+        addFruit: true,
+        redirect: false
       });
+      this.fruitTaste()
     } else {
       document.getElementById("add-to-bowl").disable = true;
     }
@@ -74,7 +86,8 @@ export class AppContextProvider extends React.Component {
     this.setState({
       addFruit: false,
       click: 0,
-      clickedFruits: []
+      clickedFruits: [],
+      squishClick: 0
     });
   }
 
@@ -111,14 +124,24 @@ export class AppContextProvider extends React.Component {
     });
     switch (this.state.squishClick) {
       case 0:
-        anime({
-          delay: 300,
-          targets: ".squishFruit",
-          opacity: 1,
-          easing: "easeInOutQuad",
-          translateY: {value: -18, easing: "linear"},
-          duration: 1000
-        })
+      let case0 = anime.timeline()
+        case0
+          .add({
+            targets: ".basket",
+            opacity: 0,
+            easing: "easeInOutQuad",
+            translateY: {value: 15, easing: "linear"},
+            duration: 1000
+          })
+          .add({
+            offset: 0,
+            delay: 300,
+            targets: ".squishFruit",
+            opacity: 1,
+            easing: "easeInOutQuad",
+            translateY: {value: -18, easing: "linear"},
+            duration: 1000
+          })
         break
       case 1:
         let case1 = anime.timeline()
@@ -158,16 +181,33 @@ export class AppContextProvider extends React.Component {
               duration: 1000
             })
             break
+        case 3:
+        this.setState({showModal: true})
+          break
       default:
-      console.log('default')
-        
+      this.setState({squishClick: 0})
         break
   }
-  
-
-
     this.setState({squishClick: this.state.squishClick + 1})
-    console.log("squish click", this.state.squishClick)
+  }
+
+  fruitTaste() {
+    const { clickedFruits, fruits } = this.state
+    const tasteArray = clickedFruits.map(url => {
+      const { flavor } = fruits.find(fruit => fruit.url === url);
+      return flavor
+    })
+    let numA = Math.floor(Math.random() * 3);
+    let numB = Math.floor(Math.random() * 3);
+
+    this.setState({
+      taste: tasteArray[numA][numB]
+    })
+  }
+
+  closeModal() {
+    this.setState({showModal: false, redirect: true});
+    this.resetFruits()
   }
 
   render() {
