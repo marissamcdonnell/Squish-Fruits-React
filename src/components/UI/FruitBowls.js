@@ -1,5 +1,5 @@
 import React from "react";
-import { withAppContext } from "../utils/AppContext";
+import { withAppContext } from "../../utils/AppContext";
 
 const FruitBowls = ({ appContext }) => (
   <div className="mix-right-bowl">

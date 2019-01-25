@@ -1,5 +1,5 @@
 import React from "react";
-import List from "./List";
+import List from "../components/UI/List";
 import { Link } from "react-router-dom";
 
 export default class HomePage extends React.Component {

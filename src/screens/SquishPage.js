@@ -1,16 +1,17 @@
 import React from "react";
-import FruitBowls from "./FruitBowls";
+import FruitBowls from "../components/UI/FruitBowls";
 import { withAppContext } from "../utils/AppContext";
+import SquishButton from "../components/SquishPage/SquishButton";
 
 const SquishPage = ({ appContext }) => (
   <div className="mix squish-page">
     <div className="mixLeft mix-left-extra">
       <h3>Now Squish the fruits to a nice squished mush!!!</h3>
-      <button className="button" onClick={appContext.squishing}>
-        Squish!!!
-      </button>
+      <SquishButton />
     </div>
-    {appContext.squishClick == 4 ? '' : 
+    {appContext.squishClick == 4 ? (
+      ""
+    ) : (
       <div>
         <img
           className="pestle"
@@ -18,7 +19,7 @@ const SquishPage = ({ appContext }) => (
         />
         <FruitBowls />
       </div>
-      }
+    )}
   </div>
 );
 

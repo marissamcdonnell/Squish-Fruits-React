@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Header from "../components/Header";
-import HomePage from "../components/HomePage";
-import FruitsPage from "../components/FruitsPage";
-import SquishPage from "../components/SquishPage";
-import AboutPage from "../components/AboutPage";
-import NoPage from "../components/NoPage";
-import List from "../components/List";
+import Header from "../components/UI/Header";
+import HomePage from "./HomePage";
+import FruitsPage from "./FruitsPage";
+import SquishPage from "./SquishPage";
+import AboutPage from "./AboutPage";
+import NoPage from "./NoPage";
+import List from "../components/UI/List";
 import ModalResult from "../utils/ModalResult";
 
 const AppRouter = () => (

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AppRouter from "./router/AppRouter";
+import AppRouter from "./screens/AppRouter";
 import { AppContextProvider } from "./utils/AppContext";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
