@@ -1,0 +1,13 @@
+.button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.5);
+    box-shadow: none;
+    animation: none;
+  }
+}

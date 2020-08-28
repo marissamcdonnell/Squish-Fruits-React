@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 600px;
+}
+
+.yellowBox {
+  background-color: $trans-yellow;
+  font-family: $main-font;
+  padding: 10px 20px 60px 20px;
+  width: 462px;
+  margin-bottom: 1rem;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 45px 64px 0 64px;
+  align-items: center;
+}

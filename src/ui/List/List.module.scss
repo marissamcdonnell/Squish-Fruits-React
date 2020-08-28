@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.side {
+  margin: 1rem;
+  background-color: $trans-yellow;
+  width: 350px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  font-family: $main-font;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  ul {
+    list-style: none;
+    padding: 0 37px;
+  }
+
+  li {
+    font-size: 24px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 25px;
+  }
+
+  img {
+    height: 113px;
+    padding-right: 26px;
+    vertical-align: middle;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: orange;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+  }
+}

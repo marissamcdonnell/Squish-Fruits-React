@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.container {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 3px 17px black;
+}
+
+.innerContainer {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titleContainer {
+  background-color: $yellow;
+  padding: 10px 40px 0 40px;
+  white-space: nowrap;
+}
+
+.title {
+  font-family: 'Luckiest Guy', 'sans-serif';
+  font-size: 37px;
+  color: $green;
+  text-shadow: -1px 2px #002309;
+}
+
+.active {
+  background-color: $yellow;
+  padding: 6px 22px;
+}
+
+.nav {
+  cursor: pointer;
+}
+
+.nav ul {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  margin: 45px 0;
+  border: 0;
+}
+
+.nav li {
+  font-family: $main-font;
+  font-size: 20px;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: $green;
+}
+
+.nav a:hover {
+  background-color: $yellow;
+  padding: 6px 22px;
+}
+
+.nav li:hover {
+  text-transform: uppercase;
+}
+
+.nav a:active {
+  background-color: $yellow;
+  padding: 6px 22px;
+}

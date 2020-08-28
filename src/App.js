@@ -1,10 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import AppRouter from "./router/AppRouter";
-import { AppContextProvider } from "./utils/AppContext";
-import "normalize.css/normalize.css";
-import "./styles/styles.scss";
+import React from 'react'
 
-const App = () => <AppContextProvider render={appContext => <AppRouter />} />;
+import AppRouter from './utils/router/AppRouter'
 
-ReactDOM.render(<App />, document.getElementById("app"));
+import './styles/styles.module.scss'
+
+const App = () => <AppRouter />
+
+export default App

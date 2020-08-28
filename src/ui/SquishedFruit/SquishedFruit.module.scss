@@ -1,0 +1,25 @@
+@mixin squish {
+  position: absolute;
+  left: -11px;
+  top: 18rem;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+.squishFruit {
+  @include squish;
+  width: 522px;
+  z-index: 8;
+}
+
+.squishFruit2 {
+  @include squish;
+  width: 511px;
+  z-index: 7;
+}
+
+.squishFruit3 {
+  @include squish;
+  width: 517px;
+  z-index: 8;
+}

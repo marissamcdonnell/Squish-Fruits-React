@@ -1,0 +1,51 @@
+.container {
+  background-color: rgba(255, 248, 191, 0.8);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 600px;
+}
+
+.mixLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 490px;
+  align-self: center;
+
+  .mix-squish-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+.pestle {
+  position: relative;
+  height: 300px;
+  transform: rotate(16deg);
+  z-index: 8;
+  margin-left: 10rem;
+}
+
+.squishPage {
+  position: absolute;
+  top: 5rem;
+}
+
+.squishPageNone {
+  display: none;
+}

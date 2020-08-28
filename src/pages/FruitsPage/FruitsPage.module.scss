@@ -1,0 +1,74 @@
+.container {
+  background-color: rgba(255, 248, 191, 0.8);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 600px;
+}
+
+.innerContainerLeft {
+  max-width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 490px;
+}
+
+.textContainer {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.fruitL2 {
+  background-color: rgba(255, 248, 191, 0.92);
+  display: inline-block;
+  width: 490px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  font-family: 'Actor', 'sans-serif';
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: orange;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  li {
+    margin: 2rem;
+    list-style: none;
+  }
+}
+
+#fruitsLB ul {
+  list-style: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}

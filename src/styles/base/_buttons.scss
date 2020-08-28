@@ -1,0 +1,31 @@
+button {
+  font-family: $main-font;
+  font-size: 20px;
+  padding: 12px 77px;
+  opacity: 1;
+  margin-top: 31px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, red, #ffea47, red);
+  background-size: 400% 400%;
+  outline: none;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+button:hover {
+  transform: scale(1.1);
+  animation: gradient 10s ease infinite;
+  box-shadow: 2px 2px 5px darkgrey;
+}
+
+@keyframes gradient {
+  50% {
+    background-position: 100% 0;
+  }
+}
